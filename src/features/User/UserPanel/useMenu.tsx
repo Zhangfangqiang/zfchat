@@ -1,7 +1,6 @@
 import { ActionIcon, DiscordIcon, Icon } from '@lobehub/ui';
 import { Badge } from 'antd';
 import {
-  Book,
   CircleUserRound,
   Download,
   Feather,
@@ -164,15 +163,6 @@ export const useMenu = () => {
     },
     {
       children: [
-        {
-          icon: <Icon icon={Book} />,
-          key: 'docs',
-          label: (
-            <Link href={DOCUMENTS} target={'_blank'}>
-              {t('userPanel.docs')}
-            </Link>
-          ),
-        },
         {
           icon: <Icon icon={Feather} />,
           key: 'feedback',

@@ -1,6 +1,6 @@
-import { getAnalyticsConfig } from './analytics';
 import { getAppConfig } from './app';
 import { getProviderConfig } from './provider';
+import { getAnalyticsConfig } from './analytics';
 
 export const getServerConfig = () => {
   if (typeof process === 'undefined') {

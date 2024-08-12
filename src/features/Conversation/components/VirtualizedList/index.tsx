@@ -16,7 +16,6 @@ import { useSessionStore } from '@/store/session';
 
 import AutoScroll from '../AutoScroll';
 import Item from '../ChatItem';
-import InboxWelcome from '../InboxWelcome';
 import SkeletonList from '../SkeletonList';
 
 interface VirtualizedListProps {
@@ -66,7 +65,7 @@ const VirtualizedList = memo<VirtualizedListProps>(({ mobile }) => {
 
   const itemContent = useCallback(
     (index: number, id: string) => {
-      if (id === WELCOME_GUIDE_CHAT_ID) return <InboxWelcome />;
+      if (id === WELCOME_GUIDE_CHAT_ID) return <></>;
 
       return index === 0 ? (
         <div style={{ height: 24 + (mobile ? 0 : 64) }} />

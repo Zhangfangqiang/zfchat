@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
-
+import { OFFICIAL_URL } from '@/const/url';
 import { getClientConfig } from '@/config/client';
 import { getServerConfig } from '@/config/server';
-import { OFFICIAL_URL } from '@/const/url';
 import { translation } from '@/server/translation';
 
 const title = 'zfChat';

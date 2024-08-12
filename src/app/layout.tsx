@@ -1,14 +1,13 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { ResolvingViewport } from 'next';
-import { cookies } from 'next/headers';
 import { ReactNode } from 'react';
 import { isRtlLang } from 'rtl-detect';
-
+import { cookies } from 'next/headers';
+import { ResolvingViewport } from 'next';
 import Analytics from '@/components/Analytics';
-import { DEFAULT_LANG, LOBE_LOCALE_COOKIE } from '@/const/locale';
 import AuthProvider from '@/layout/AuthProvider';
-import GlobalProvider from '@/layout/GlobalProvider';
 import { isMobileDevice } from '@/utils/responsive';
+import GlobalProvider from '@/layout/GlobalProvider';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { DEFAULT_LANG, LOBE_LOCALE_COOKIE } from '@/const/locale';
 
 type RootLayoutProps = {
   children: ReactNode;

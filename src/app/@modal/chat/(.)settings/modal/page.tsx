@@ -21,10 +21,7 @@ const AgentPrompt = dynamic(() => import('@/features/AgentSetting/AgentPrompt'),
   loading,
   ssr: false,
 });
-const AgentPlugin = dynamic(() => import('@/features/AgentSetting/AgentPlugin'), {
-  loading,
-  ssr: false,
-});
+
 const AgentModal = dynamic(() => import('@/features/AgentSetting/AgentModal'), {
   loading,
   ssr: false,
@@ -45,7 +42,6 @@ const Page = () => {
       {tab === ChatSettingsTabs.Chat && <AgentChat />}
       {tab === ChatSettingsTabs.Modal && <AgentModal />}
       {tab === ChatSettingsTabs.TTS && <AgentTTS />}
-      {tab === ChatSettingsTabs.Plugin && <AgentPlugin />}
     </>
   );
 };

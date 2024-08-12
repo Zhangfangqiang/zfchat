@@ -1,9 +1,7 @@
 'use client';
 
 import { memo } from 'react';
-import { Flexbox } from 'react-layout-kit';
 
-import HeaderContent from '@/app/(main)/chat/settings/features/HeaderContent';
 import Menu from '@/components/Menu';
 import { useQuery } from '@/hooks/useQuery';
 import { useQueryRoute } from '@/hooks/useQueryRoute';
@@ -27,9 +25,6 @@ const CategoryContent = memo(() => {
         selectedKeys={[tab as any]}
         variant={'compact'}
       />
-      <Flexbox align={'center'} gap={8} paddingInline={8} width={'100%'}>
-        <HeaderContent modal />
-      </Flexbox>
     </>
   );
 });

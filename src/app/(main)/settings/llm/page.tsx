@@ -1,10 +1,8 @@
+import Page from './index';
 import { notFound } from 'next/navigation';
-
-import { serverFeatureFlags } from '@/config/server/featureFlags';
 import { metadataModule } from '@/server/metadata';
 import { translation } from '@/server/translation';
-
-import Page from './index';
+import { serverFeatureFlags } from '@/config/server/featureFlags';
 
 export const generateMetadata = async () => {
   const { t } = await translation('setting');

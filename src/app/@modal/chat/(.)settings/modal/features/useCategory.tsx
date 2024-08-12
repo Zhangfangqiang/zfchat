@@ -40,12 +40,7 @@ export const useCategory = ({ mobile }: UseCategoryOptions = {}) => {
         icon: <Icon icon={Mic2} size={iconSize} />,
         key: ChatSettingsTabs.TTS,
         label: t('settingTTS.title'),
-      },
-      {
-        icon: <Icon icon={Blocks} size={iconSize} />,
-        key: ChatSettingsTabs.Plugin,
-        label: t('settingPlugin.title'),
-      },
+      }
     ],
     [t],
   );

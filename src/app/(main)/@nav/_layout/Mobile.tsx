@@ -1,15 +1,14 @@
 'use client';
 
-import { Icon, MobileTabBar, type MobileTabBarProps } from '@lobehub/ui';
-import { createStyles } from 'antd-style';
-import { Compass, MessageSquare, User } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import { rgba } from 'polished';
 import { memo, useMemo } from 'react';
+import { createStyles } from 'antd-style';
+import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-
+import { MessageSquare, User } from 'lucide-react';
 import { useActiveTabKey } from '@/hooks/useActiveTabKey';
 import { SidebarTabKey } from '@/store/global/initialState';
+import { Icon, MobileTabBar, type MobileTabBarProps } from '@lobehub/ui';
 
 const useStyles = createStyles(({ css, token }) => ({
   active: css`
@@ -42,14 +41,6 @@ const Nav = memo(() => {
           router.push('/chat');
         },
         title: t('tab.chat'),
-      },
-      {
-        icon: (active) => <Icon className={active ? styles.active : undefined} icon={Compass} />,
-        key: SidebarTabKey.Market,
-        onClick: () => {
-          router.push('/market');
-        },
-        title: t('tab.market'),
       },
       {
         icon: (active) => <Icon className={active ? styles.active : undefined} icon={User} />,

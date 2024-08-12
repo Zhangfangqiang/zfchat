@@ -1,12 +1,11 @@
-import { ActionIcon } from '@lobehub/ui';
-import { Compass, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { memo } from 'react';
+import { ActionIcon } from '@lobehub/ui';
+import { MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
 import { useGlobalStore } from '@/store/global';
-import { SidebarTabKey } from '@/store/global/initialState';
 import { useSessionStore } from '@/store/session';
+import { SidebarTabKey } from '@/store/global/initialState';
 
 export interface TopActionProps {
   tab?: SidebarTabKey;
@@ -34,15 +33,7 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
           title={t('tab.chat')}
         />
       </Link>
-      <Link aria-label={t('tab.market')} href={'/market'}>
-        <ActionIcon
-          active={tab === SidebarTabKey.Market}
-          icon={Compass}
-          placement={'right'}
-          size="large"
-          title={t('tab.market')}
-        />
-      </Link>
+
     </>
   );
 });

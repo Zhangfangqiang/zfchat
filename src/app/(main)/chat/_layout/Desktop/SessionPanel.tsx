@@ -26,7 +26,7 @@ const SessionPanel = memo<PropsWithChildren>(({ children }) => {
     s.updatePreference,
   ]);
   const [cacheExpand, setCacheExpand] = useState<boolean>(Boolean(sessionExpandable));
-  const [tmpWidth, setWidth] = useState(sessionsWidth);
+  const [tmpWidth, setWidth] = useState<number | undefined>(sessionsWidth);
   if (tmpWidth !== sessionsWidth) setWidth(sessionsWidth);
 
   const handleExpand = (expand: boolean) => {
