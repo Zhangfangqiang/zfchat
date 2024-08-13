@@ -1,12 +1,10 @@
-import StructuredData from '@/components/StructuredData';
-import { ldModule } from '@/server/ld';
-import { metadataModule } from '@/server/metadata';
-import { translation } from '@/server/translation';
-import { isMobileDevice } from '@/utils/responsive';
-
-import Actions from './features/Actions';
 import Hero from './features/Hero';
-import Logo from './features/Logo';
+import {ldModule} from '@/server/ld';
+import Actions from './features/Actions';
+import {metadataModule} from '@/server/metadata';
+import {translation} from '@/server/translation';
+import {isMobileDevice} from '@/utils/responsive';
+import StructuredData from '@/components/StructuredData';
 
 export const generateMetadata = async () => {
   const { t } = await translation('metadata');
@@ -29,7 +27,6 @@ const Page = async () => {
   return (
     <>
       <StructuredData ld={ld} />
-      {/*<Logo mobile={mobile} />*/}
       <Hero />
       <Actions mobile={mobile} />
     </>

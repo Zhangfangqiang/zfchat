@@ -21,7 +21,6 @@ export const useCategory = () => {
           key: SettingsTabs.Common,
           label: t('tab.common'),
         },
-
         showLLM && {
           icon: <Icon icon={Brain} />,
           key: SettingsTabs.LLM,
@@ -32,11 +31,6 @@ export const useCategory = () => {
           icon: <Icon icon={Bot} />,
           key: SettingsTabs.Agent,
           label: t('tab.agent'),
-        },
-        {
-          icon: <Icon icon={Info} />,
-          key: SettingsTabs.About,
-          label: t('tab.about'),
         },
       ].filter(Boolean) as MenuProps['items'],
     [t, enableWebrtc, showLLM],

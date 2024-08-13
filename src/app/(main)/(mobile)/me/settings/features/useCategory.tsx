@@ -1,8 +1,6 @@
-import { Tag } from 'antd';
-import { Bot, Brain, Cloudy, Info, Mic2, Settings2 } from 'lucide-react';
+import { Bot, Brain, Mic2, Settings2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
 import { CellProps } from '@/components/Cell';
@@ -30,11 +28,6 @@ export const useCategory = () => {
       icon: Bot,
       key: SettingsTabs.Agent,
       label: t('tab.agent'),
-    },
-    {
-      icon: Info,
-      key: SettingsTabs.About,
-      label: t('tab.about'),
     },
   ].filter(Boolean) as CellProps[];
 

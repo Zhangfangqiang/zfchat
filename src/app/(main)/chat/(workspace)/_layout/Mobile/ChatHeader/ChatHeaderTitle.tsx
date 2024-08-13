@@ -14,6 +14,9 @@ import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selector
 const ChatHeaderTitle = memo(() => {
   const { t } = useTranslation('chat');
   const toggleConfig = useGlobalStore((s) => s.toggleMobileTopic);
+
+  console.log("toggleConfig",toggleConfig)
+
   const [topicLength, topic] = useChatStore((s) => [
     topicSelectors.currentTopicLength(s),
     topicSelectors.currentActiveTopic(s),
